@@ -2,10 +2,8 @@
   "name": "ssextention",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "express": "^4.17.1",
-    "npack-scripts": "3.4.10",
-    "supertest": "^4.0.2"
+  "entries": {
+    "index": "./src/index"
   },
   "scripts": {
     "start": "npack-scripts start",
@@ -15,6 +13,12 @@
   },
   "eslintConfig": {
     "extends": "npack-app"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "npack-scripts": "3.4.10",
+    "nodemon-webpack-plugin": "^4.3.2",
+    "supertest": "^4.0.2"
   },
   "browserslist": {
     "production": [
@@ -27,8 +31,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "entries": {
-    "index": "./src/index"
   }
 }
