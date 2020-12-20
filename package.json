@@ -8,8 +8,7 @@
   "private": true,
   "workspaces": [
     "server",
-    "react-app",
-    "packages/*"
+    "react-app"
   ],
   "scripts": {
     "lint": "tslint -c tslint.json 'react-app/src/**/*.ts' 'server/src/**/*.ts'",

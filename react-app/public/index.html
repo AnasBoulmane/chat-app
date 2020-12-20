@@ -1,21 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+<html dir="LTR"
+  class="js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless"
+  lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <link rel="stylesheet" href="%PUBLIC_URL%/index.00a5f40a9c8786346384e04137eb4285.css" />
+  <style>
+    html,
+    body,
+    #app {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+    }
+
+    #app {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #startup,
+    #initial_startup {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background-color: #f0f0f0;
+
+      -moz-user-select: none;
+      -webkit-user-select: none;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: -webkit-box;
+      display: -webkit-flex;
+      -webkit-align-items: center;
+      -webkit-justify-content: center;
+      flex-direction: column;
+      -webkit-flex-direction: column;
+    }
+
+    .spinner-container {
+      -webkit-animation: rotate 2s linear infinite;
+      animation: rotate 2s linear infinite;
+      z-index: 2;
+    }
+
+    .spinner-path {
+      stroke-dasharray: 1, 150;
+      /* 1%, 101% circumference */
+      stroke-dashoffset: 0;
+      stroke: #acb9bf;
+      stroke-linecap: round;
+      -webkit-animation: dash 1.5s ease-in-out infinite;
+      animation: dash 1.5s ease-in-out infinite;
+    }
+
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @-webkit-keyframes rotate {
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes dash {
+      0% {
+        stroke-dasharray: 1, 150;
+        /* 1%, 101% circumference */
+        stroke-dashoffset: 0;
+      }
+
+      50% {
+        stroke-dasharray: 90, 150;
+        /* 70%, 101% circumference */
+        stroke-dashoffset: -35;
+        /* 25% circumference */
+      }
+
+      100% {
+        stroke-dasharray: 90, 150;
+        /* 70%, 101% circumference */
+        stroke-dashoffset: -124;
+        /* -99% circumference */
+      }
+    }
+
+    @-webkit-keyframes dash {
+      0% {
+        stroke-dasharray: 1, 150;
+        /* 1%, 101% circumference */
+        stroke-dashoffset: 0;
+      }
+
+      50% {
+        stroke-dasharray: 90, 150;
+        /* 70%, 101% circumference */
+        stroke-dashoffset: -35;
+        /* 25% circumference */
+      }
+
+      100% {
+        stroke-dasharray: 90, 150;
+        /* 70%, 101% circumference */
+        stroke-dashoffset: -124;
+        /* -99% circumference */
+      }
+    }
+
+    .progress-container {
+      width: 360px;
+      position: fixed;
+      padding-top: 120px;
+      top: 50%;
+      left: 50%;
+      margin-left: -180px;
+    }
+
+    progress {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 3px;
+      border: none;
+      margin: 0;
+      color: #00d9bb;
+      background-color: #e6e6e6;
+    }
+
+    progress[value]::-webkit-progress-bar {
+      background-color: #e6e6e6;
+    }
+
+    progress[value]::-webkit-progress-value {
+      background-color: #00d9bb;
+      transition: width 0.45s ease;
+    }
+
+    progress[value]::-moz-progress-bar {
+      background-color: #00d9bb;
+      transition: width 0.45s ease;
+    }
+
+    [data-asset-chat-background-dark] {
+      background-image: url(https://web.whatsapp.com/img/bg-chat-tile-dark_a4be512e7195b6b733d9110b408f075d.png);
+    }
+  </style>
+  <link rel="stylesheet" href="%PUBLIC_URL%/app.1060dd9c0247aafeaefb2113a22cae05.css" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,12 +175,20 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <title>React App</title>
+</head>
+
+<body class="web dark vsc-initialized">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="app">
+    <div class="_1rp8- _1f763 app-wrapper-web font-fix os-mac">
+      <span></span><span></span><span></span><span></span><span></span>
+      <div id="root" tabindex="-1" class="_36Q2N two">
+
+      </div>
+    </div>
+  </div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -39,5 +198,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>
