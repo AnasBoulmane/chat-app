@@ -17,5 +17,7 @@ const Template: Story<DropdownProps> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  title: "Button",
+  title: "menu",
+  items: ["menuNewGroup", "menuCreateRoom", "menuProfil", "menuArchived", "menuStarred", "menuSettings", "menuLogout"],
+  onItemClick: (item: string) => console.log({ item }),
 };
