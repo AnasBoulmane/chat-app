@@ -1,4 +1,3 @@
-import { isPhoneNumber } from "class-validator";
 import { mongoConnect } from "helpers/mongo";
 import { Conversation, User } from "entity";
 
@@ -6,7 +5,10 @@ import { Conversation, User } from "entity";
 // ### Create Conversation
 // ###################
 
-type ConversationData = { name?: string; type?: "group" };
+interface ConversationData {
+  name?: string;
+  type?: "group";
+}
 type UserID = User | { _id: string };
 type ConvID = Conversation | { _id: string };
 

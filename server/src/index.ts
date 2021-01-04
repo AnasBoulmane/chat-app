@@ -1,8 +1,7 @@
 import http from "http";
 import morgan from "morgan";
 import express from "express";
-import socketio from "helpers/socketio";
-import session from "helpers/session";
+import { ioServer } from "helpers/ioServer";
 import { logger } from "helpers/logger";
 
 import api from "routes/App";
@@ -20,7 +19,7 @@ app.use(morgan("tiny"));
 app.use("/api/v1/", api);
 app.use(express.static("public"));
 
-export const server = socketio(http.createServer(app));
+export const server = ioServer(http.createServer(app));
 
 server.listen(PORT, () => {
   logger.info(`server listening at http://${HOST}:${PORT}`);

@@ -1,6 +1,5 @@
 import { Collection, Db, MongoClient } from "mongodb";
 import { User, Message, Conversation } from "entity";
-import { logger } from "./logger";
 
 export interface Mongo {
   users: Collection<User>;
@@ -13,7 +12,7 @@ let mongo: Mongo | undefined;
 
 const connect = async ({ db: dbName = "chat" } = {}): Promise<[MongoClient, Db]> => {
   if (mongo) throw new Error("mongo client alredy popilated");
-  const client = new MongoClient(process.env.ATLAS_URI || "no ATLAS_URI", {
+  const client = new MongoClient(process.env.EXPRESS_APP_ATLAS_URI || "no ATLAS_URI", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });

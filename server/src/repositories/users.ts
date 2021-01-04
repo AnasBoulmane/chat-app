@@ -11,7 +11,11 @@ const purePhoneNumber = (phone: string) => phone.replace(/[^+0-9]/g, "");
 const PHONE_REGION = null;
 const DEFAULT_VALUES = { lastVisite: new Date(), contacts: [], setting: {} };
 
-type UserData = { phone: string; name?: string; actu?: string };
+interface UserData {
+  phone: string;
+  name?: string;
+  actu?: string;
+}
 
 export const createUser = async (user: UserData): Promise<User> => {
   const mongo = await mongoConnect();
@@ -30,13 +34,26 @@ export const createUser = async (user: UserData): Promise<User> => {
   };
 };
 
+export const findUser = async (phoneNumber: string): Promise<User> => {
+  const mongo = await mongoConnect();
+  const phone = purePhoneNumber(phoneNumber);
+  // validate the phone number
+  if (!isPhoneNumber(phoneNumber, PHONE_REGION)) throw new Error("invalid Phone number");
+  const user = await mongo.users.findOne({ phone });
+  if (!user) throw new Error("Phone number does not exists");
+  return user;
+};
+
 // ###################
 // ### Add Contact
 // ###################
 
-type ContactData = { phone: string; name?: string };
+interface ContactData {
+  phone: string;
+  name?: string;
+}
 
-export const addContact = async ({ _id }: User, { phone, name }: ContactData): Promise<User|undefined> => {
+export const addContact = async ({ _id }: User, { phone, name }: ContactData): Promise<User | undefined> => {
   const mongo = await mongoConnect();
   // validate the phone number
   if (!isPhoneNumber(phone, PHONE_REGION)) throw new Error("invalid Phone number");
