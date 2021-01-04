@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { io, Socket } from "socket.io-client";
 
+import { LocalizationProvider } from "./LocalizationContext";
+
 export interface IRootContext {
   socket: Socket;
   user?: any;
@@ -57,5 +59,9 @@ export const RootContext = React.createContext<IRootContext>(initRootContext);
 
 export const RootContextProvider = ({ children }: any) => {
   const value: IRootContext = useStore();
-  return <RootContext.Provider value={value}>{children}</RootContext.Provider>;
+  return (
+    <LocalizationProvider>
+      <RootContext.Provider value={value}>{children}</RootContext.Provider>
+    </LocalizationProvider>
+  );
 };

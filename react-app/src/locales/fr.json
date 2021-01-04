@@ -1,0 +1,20 @@
+{
+  "resources": {
+    "loginPage": {},
+    "statutPage": {},
+    "profilSidebar": {},
+    "contactsSidebar": {},
+    "defaultSidebar": {
+      "menu": "Menu",
+      "menuNewGroup": "Nouveau groupe",
+      "menuCreateRoom": "Créer un salon",
+      "menuProfil": "Profil",
+      "menuArchived": "Archivées",
+      "menuStarred": "Messages importants",
+      "menuSettings": "Paramètres",
+      "menuLogout": "Déconnexion",
+
+      "contactSearchPlaceholder": "Rechercher ou démarrer une nouvelle discussion"
+    }
+  }
+}

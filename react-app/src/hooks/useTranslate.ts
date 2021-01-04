@@ -1,5 +1,8 @@
-import { Translate, translateWithSection } from "../helpers/translate";
+import { useContext } from "react";
+import { LocalizationContext } from "contexts/LocalizationContext";
+import { Translate, translateWithSection } from "helpers/translate";
 
-export default function useTranslate (section: string): Translate {
-  return translateWithSection(section);
+export function useTranslate (section: string): Translate {
+  const { selectedLocale } = useContext(LocalizationContext);
+  return translateWithSection(section, selectedLocale);
 }

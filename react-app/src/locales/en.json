@@ -4,6 +4,17 @@
     "statutPage": {},
     "profilSidebar": {},
     "contactsSidebar": {},
-    "defaultSidebar": {}
+    "defaultSidebar": {
+      "menu": "Menu",
+      "menuNewGroup": "New group",
+      "menuCreateRoom": "Create a room",
+      "menuProfil": "Profil",
+      "menuArchived": "Archived",
+      "menuStarred": "Starred",
+      "menuSettings": "Settings",
+      "menuLogout": "Log out",
+
+      "contactSearchPlaceholder": "Search or start new chat"
+    }
   }
 }
