@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { InputGroup } from "stories/InputGroup";
 import { Button } from "stories/Button";
-import { isPhoneNumber } from "helpers/IsPhoneNumber";
+import { isPhoneNumber } from "helpers/isPhoneNumber";
 import { Modal } from "stories/Modal";
 import { LoginRow } from "stories/Modal.style";
 import { RootContext } from "contexts/RootContext";

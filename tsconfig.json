@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
     "target": "es5",
     "lib": ["esnext"],
     "allowJs": true,
@@ -15,7 +15,14 @@
     "resolveJsonModule": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "importHelpers": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "noEmit": true,
+    "paths": {
+      "@ext/shared/*": ["../../shared/*"]
+    }
   },
-  "include": ["src"]
+  "exclude": ["node_modules"]
 }

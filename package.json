@@ -2,17 +2,16 @@
   "name": "chat-app",
   "version": "1.0.0",
   "description": "chat application using (React, Express.js and Socket.io) ",
-  "main": "server/build/index.js",
+  "main": "packages/server/build/index.js",
   "author": "aboulmane <aboulmane@sqli.com>",
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "server",
-    "react-app"
+    "packages/*"
   ],
   "scripts": {
-    "lint": "tslint -c tslint.json 'react-app/src/**/*.ts' 'server/src/**/*.ts'",
-    "format": "prettier-tslint fix 'server/**/*.ts' 'react-app/**/*.ts*'"
+    "lint": "tslint -c tslint.json 'packages/react-app/src/**/*.ts' 'packages/server/src/**/*.ts'",
+    "format": "prettier-tslint fix 'packages/server/**/*.ts' 'packages/react-app/**/*.ts*'"
   },
   "devDependencies": {
     "husky": "^4.3.0",
