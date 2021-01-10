@@ -66,7 +66,7 @@ export const conversations = [
       _id: "3",
       message: "Ta ana chal hadi mhdrt m3ah",
       timestamp: "17/07/2020",
-      state: "recieved",
+      state: "received",
     },
   },
 ];

@@ -40,7 +40,7 @@ export interface Conversation {
 export enum MessageState {
   Error = "error",
   Sended = "sended",
-  Recieved = "recieved",
+  Received = "received",
 }
 
 export interface Message {

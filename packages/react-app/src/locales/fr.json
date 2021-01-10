@@ -14,7 +14,8 @@
       "menuSettings": "Paramètres",
       "menuLogout": "Déconnexion",
 
-      "contactSearchPlaceholder": "Rechercher ou démarrer une nouvelle discussion"
+      "contactSearchPlaceholder": "Rechercher ou démarrer une nouvelle discussion",
+      "ConversationsListLabel": "Liste des discussions. Appuyez sur la touche de flèche droite sur une discussion pour ouvrir son menu contextuel."
     }
   }
 }

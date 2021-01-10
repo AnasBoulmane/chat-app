@@ -1,13 +1,16 @@
 import React, { useState, useContext } from "react";
-import { InputGroup } from "stories/InputGroup";
-import { Button } from "stories/Button";
-import { isPhoneNumber } from "helpers/isPhoneNumber";
-import { Modal } from "stories/Modal";
-import { LoginRow } from "stories/Modal.style";
+import { isPhoneNumber } from "@shared/helpers";
 import { RootContext } from "contexts/RootContext";
+import { InputGroup } from "stories/InputGroup";
+import { LoginRow } from "stories/Modal.style";
+import { Button } from "stories/Button";
+import { Modal } from "stories/Modal";
+
+// TODO: remove mock data
+import { conversations } from "stories/mock/Sidebar";
 
 export const Login = () => {
-  const { setUser } = useContext(RootContext);
+  const { setUser, setConversations } = useContext(RootContext);
   const [phone, setPhone] = useState("+212 690 344426");
   const [password, setPassword] = useState("313156465489");
 
@@ -16,7 +19,8 @@ export const Login = () => {
   const onLogin = () => {
     if (!isPhoneNumber(phone) || password.length <= 7) return;
     console.log({ phone, password });
-    setUser(phone);
+    setUser({ phone });
+    setConversations(conversations);
   };
 
   return (

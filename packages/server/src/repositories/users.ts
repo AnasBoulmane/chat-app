@@ -1,5 +1,5 @@
+import { User } from "@shared/helpers";
 import { mongoConnect } from "helpers/mongo";
-import { User } from "entity";
 import { isPhoneNumber } from "class-validator";
 
 const purePhoneNumber = (phone: string) => phone.replace(/[^+0-9]/g, "");

@@ -1,5 +1,5 @@
+import { Conversation, User } from "@shared/helpers";
 import { mongoConnect } from "helpers/mongo";
-import { Conversation, User } from "entity";
 
 // ###################
 // ### Create Conversation

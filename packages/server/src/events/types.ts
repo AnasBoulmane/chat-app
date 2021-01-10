@@ -1,6 +1,5 @@
-import { User } from "entity";
+import { User } from "@shared/helpers";
 import { Socket } from "socket.io";
-import { logger } from "helpers/logger";
 
 export type EventHandler<U> = (params: EventHandlerParams<U>) => void;
 

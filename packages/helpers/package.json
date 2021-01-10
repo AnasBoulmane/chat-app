@@ -1,0 +1,32 @@
+{
+  "name": "@shared/helpers",
+  "version": "1.0.1",
+  "type": "module",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "start": "rollup -w --config ./rollup.config.js",
+    "build": "rollup --config ./rollup.config.js",
+    "lint": "tslint -c ./../../tslint.json -p tsconfig.json"
+  },
+  "author": "aboulmane <anassboulmane@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@types/google-libphonenumber": "^7.4.19",
+    "google-libphonenumber": "^3.2.15",
+    "typescript": "4.0.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

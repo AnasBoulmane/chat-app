@@ -14,7 +14,8 @@
       "menuSettings": "Settings",
       "menuLogout": "Log out",
 
-      "contactSearchPlaceholder": "Search or start new chat"
+      "contactSearchPlaceholder": "Search or start new chat",
+      "ConversationsListLabel": "Chat list. Press right arrow key on a chat to open chat context menu."
     }
   }
 }

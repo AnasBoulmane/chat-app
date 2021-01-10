@@ -1,5 +1,5 @@
 import { Collection, Db, MongoClient } from "mongodb";
-import { User, Message, Conversation } from "entity";
+import { User, Message, Conversation } from "@shared/helpers";
 
 export interface Mongo {
   users: Collection<User>;

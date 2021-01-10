@@ -1,4 +1,4 @@
-import { Conversation, Message, MessageState, User } from "entity";
+import { Conversation, Message, MessageState, User } from "@shared/helpers";
 import { mongoConnect } from "helpers/mongo";
 
 // ###################

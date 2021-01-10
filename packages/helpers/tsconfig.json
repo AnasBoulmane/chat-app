@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "build",
+    "declaration": true,
+    "module": "ESNext",
+    "noEmit": false,
+    "paths": {}
+  },
+  "include": ["src"]
+}

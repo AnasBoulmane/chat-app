@@ -1,4 +1,4 @@
-import { User } from "entity";
+import { User } from "@shared/helpers";
 import { mongoConnect, Mongo } from "helpers/mongo";
 import { addContact, createUser, deleteContact } from "./users";
 

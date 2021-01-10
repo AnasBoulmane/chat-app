@@ -1,7 +1,7 @@
+import { User } from "@shared/helpers";
 import { EventHandler, UserSocket } from "events/types";
 import { logger } from "helpers/logger";
 import { Socket } from "socket.io";
-import { User } from "entity";
 
 export const ioHandlers = (handlers: (us: UserSocket) => void) => {
   return (socket: Socket) => {
