@@ -5,7 +5,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { SearchGroup, SearchGroupProps } from "./SearchGroup";
 
 export default {
-  title: "Example/SearchGroup",
+  title: "UIElements/SearchGroup",
   component: SearchGroup,
 } as Meta;
 

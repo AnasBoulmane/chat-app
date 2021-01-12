@@ -5,7 +5,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { InputGroup, InputGroupProps } from "./InputGroup";
 
 export default {
-  title: "Example/InputGroup",
+  title: "UIElements/InputGroup",
   component: InputGroup,
 } as Meta;
 

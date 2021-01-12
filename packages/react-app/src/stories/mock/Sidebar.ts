@@ -1,3 +1,5 @@
+import { MessageState } from "@shared/helpers";
+
 export const conversations = [
   {
     _id: "1",
@@ -20,7 +22,7 @@ export const conversations = [
       _id: "1",
       message: "Khssara kakan ghir React blasst Angular dakchi tayban b3a9lo",
       timestamp: "00:46",
-      state: "sended",
+      state: MessageState.Sended,
     },
   },
   {
@@ -43,7 +45,7 @@ export const conversations = [
       _id: "2",
       message: "Ok",
       timestamp: "16/09/2020",
-      state: "sended",
+      state: MessageState.Sended,
     },
   },
   {
@@ -66,7 +68,7 @@ export const conversations = [
       _id: "3",
       message: "Ta ana chal hadi mhdrt m3ah",
       timestamp: "17/07/2020",
-      state: "received",
+      state: MessageState.Received,
     },
   },
 ];

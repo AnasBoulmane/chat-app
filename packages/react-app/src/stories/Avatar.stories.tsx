@@ -5,7 +5,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { Avatar, AvatarProps } from "./Avatar";
 
 export default {
-  title: "Example/Avatar",
+  title: "UIElements/Avatar",
   component: Avatar,
 } as Meta;
 

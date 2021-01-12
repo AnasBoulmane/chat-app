@@ -6,7 +6,7 @@ import { Dropdown, DropdownItem, DropdownProps } from "./Dropdown";
 import { useTranslate } from "hooks/useTranslate";
 
 export default {
-  title: "Example/Dropdown",
+  title: "UIElements/Dropdown",
   component: Dropdown,
 } as Meta;
 

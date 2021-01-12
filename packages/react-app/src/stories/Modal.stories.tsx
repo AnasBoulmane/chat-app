@@ -6,7 +6,7 @@ import { Modal } from "./Modal";
 import { Button } from "./Button";
 
 export default {
-  title: "Example/Modal",
+  title: "UIElements/Modal",
   component: Modal,
 } as Meta;
 

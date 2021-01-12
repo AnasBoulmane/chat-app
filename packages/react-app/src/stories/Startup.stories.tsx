@@ -5,7 +5,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { Startup, StartupProps } from "./Startup";
 
 export default {
-  title: "Example/Startup",
+  title: "UIElements/Startup",
   component: Startup,
 } as Meta;
 
