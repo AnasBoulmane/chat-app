@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useOnClickOutside } from "hooks/useOnClickOutside";
 import { useToggle } from "hooks/useToggle";
-import { MenuIcon } from "svgs/MenuIcon";
+import { MenuIcon } from "svg/MenuIcon";
 
 import { ItemContainer } from "./Dropdown.style";
 

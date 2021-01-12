@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { io, Socket } from "socket.io-client";
+import { Conversation } from "@shared/helpers";
 
 import { LocalizationProvider } from "./LocalizationContext";
 
@@ -9,9 +10,9 @@ export interface IRootContext {
   setUser: React.Dispatch<React.SetStateAction<any>>;
   contacts: any[];
   setContacts: React.Dispatch<React.SetStateAction<any[]>>;
-  conversation?: any;
+  conversation?: Conversation;
   setConversation: React.Dispatch<React.SetStateAction<any>>;
-  conversations: any[];
+  conversations: Conversation[];
   setConversations: React.Dispatch<React.SetStateAction<any[]>>;
 }
 

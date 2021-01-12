@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent } from "react";
-import { SearchIcon } from "svgs/SearchIcon";
-import { BackIcon } from "svgs/BackIcon";
-import { XIcon } from "svgs/XIcon";
+import { SearchIcon } from "svg/SearchIcon";
+import { BackIcon } from "svg/BackIcon";
+import { XIcon } from "svg/XIcon";
 
 import { Input, Placeholder } from "./SearchGroup.style";
 

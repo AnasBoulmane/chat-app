@@ -3,7 +3,7 @@ import { Conversation } from "@shared/helpers";
 import { RootContext } from "contexts/RootContext";
 import { useTranslate } from "hooks/useTranslate";
 
-import { ConversationContainer, ConversationItem, ConversationsList } from "stories/Conversations";
+import { ConversationWrapper, ConversationItem, ConversationsList } from "stories/Conversations";
 import { SearchGroup, useSearchGroup } from "stories/SearchGroup";
 
 import { SidebarHeader } from "./SidebarHeader";
@@ -34,13 +34,13 @@ export const Sidebar = () => {
               role="region"
             >
               {conversations.map((item, position) => (
-                <ConversationContainer key={position} position={position} className="_1MZWu">
+                <ConversationWrapper key={position} position={position} className="_1MZWu">
                   <ConversationItem
                     conversation={item}
                     isActive={item._id === conversation?._id}
                     onClick={onConversationItemClick(item)}
                   />
-                </ConversationContainer>
+                </ConversationWrapper>
               ))}
             </ConversationsList>
           </div>

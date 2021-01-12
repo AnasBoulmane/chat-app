@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Conversation, purePhoneNumber } from "@shared/helpers";
 import { RootContext } from "contexts/RootContext";
 import { useOnMouseHover } from "hooks/useOnMouseHover";
-import { DoubleCheckIcon } from "svgs/DoubleCheckIcon";
+import { DoubleCheckIcon } from "svg/DoubleCheckIcon";
 
 import { Avatar } from "./Avatar";
 
@@ -67,7 +67,7 @@ export const ConversationItem: React.FC<ConversationItemProps> = ({
               <span />
               <span />
               <span>
-                {/* {isHover && (
+                {isHover && (
                   <div className="tRtcW" style={{ width: 20, opacity: 1 }}>
                     <span data-testid="down" data-icon="down">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 20" width={19} height={20}>
@@ -75,7 +75,7 @@ export const ConversationItem: React.FC<ConversationItemProps> = ({
                       </svg>
                     </span>
                   </div>
-                )} */}
+                )}
               </span>
             </div>
           </div>

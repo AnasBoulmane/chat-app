@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckmarkIcon } from "svgs/CheckmarkIcon";
+import { CheckmarkIcon } from "svg/CheckmarkIcon";
 import { FormGroup, Input } from "./InputGroup.style";
 
 export interface InputGroupProps {

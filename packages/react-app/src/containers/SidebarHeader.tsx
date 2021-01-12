@@ -3,8 +3,8 @@ import { RootContext } from "contexts/RootContext";
 import { Dropdown, DropdownItem } from "stories/Dropdown";
 
 import { Avatar } from "stories/Avatar";
-import { ChatIcon } from "svgs/ChatIcon";
-import { StatusIcon } from "svgs/StatusIcon";
+import { ChatIcon } from "svg/ChatIcon";
+import { StatusIcon } from "svg/StatusIcon";
 import { useTranslate } from "hooks/useTranslate";
 
 const DROPDOWN_ITEMS = [
